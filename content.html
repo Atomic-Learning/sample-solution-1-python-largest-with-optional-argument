@@ -1,0 +1,27 @@
+<h2>Example solution using a loop and abs()</h2>
+<p>This version checks every entry in the list and tracks the largest absolute value manually. We begin by assuming the first element is the largest. We then proceed to loop over every other element in the list. If <code class="language-python">abs_value</code> is <code class="language-python">True</code>, we update the loop variable to be the absolute value of the current element.</p>
+
+<py-cell>
+def largest(list_in, abs_value=False):
+    max_value = list_in[0]
+
+    for value in list_in[1:]:
+        if abs_value:
+            value = abs(value)
+        if value > max_value:
+            max_value = value
+    return max_value
+
+</py-cell>
+
+<h2>Test calls</h2>
+<py-cell>
+print(largest([1, 2, -3]))
+print(largest([1, 2, -3], False))
+print(largest([1, 2, -3], True))
+print(largest([1, 2, -3, 4], True))
+</py-cell>
+
+<h2>Discussion</h2>
+
+<p>This function is guaranteed to work correctly for all non-empty lists and both values of <code class="language-python">abs_value</code>. However, the explicit for-loop, which includes two conditionals checks is not particularly efficient for large lists and alternative approaches might be considered for better performance.</p>
