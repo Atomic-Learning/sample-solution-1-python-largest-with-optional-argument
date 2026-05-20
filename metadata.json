@@ -12,7 +12,8 @@
     "duration": 3,
     "prerequisites": [
         "python-abs-function",
-        "exercise-python-largest-with-optional-argument"
+        "exercise-python-largest-with-optional-argument",
+        "python-slicing"
     ],
     "related": [
         "sample-solution-2-python-largest-with-optional-argument"
